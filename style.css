@@ -268,14 +268,21 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     padding-left: 10%; 
-    
     z-index: 2; 
+}
+
+.gta-online-logo{
+    background-image: url("images/gtaonline.png");
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; 
 }
 
 .gta-online-cnt h2 {
@@ -301,12 +308,11 @@ body {
 }
 
 
-.platform-logos {
+.platforms-logos {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 25px;         
-    margin-top: 30px;  
 }
 
 
