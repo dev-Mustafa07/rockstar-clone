@@ -35,7 +35,7 @@ body {
     gap: 20px;
 }
 
-.right button {
+.get-launcher {
     width: 130px;
     height: 40px;
     background-color: transparent;
@@ -43,6 +43,36 @@ body {
     outline: none;
     border: 2px solid rgba(255, 255, 255, 0.705);
     border-radius: 20px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.get-launcher:hover {
+    background-color: orange;
+    border: 2px solid orange;
+    color: black;
+}
+
+.icc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+
+
+.icc:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.ic {
+    color: white;
+    font-size: 1rem;
 }
 
 .nav-links-conatiner {
@@ -224,20 +254,32 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
     gap: 10px;
     height: 20vh;
     width: 40vw;
     border-radius: 30px;
     padding: 20px;
     cursor: pointer;
+    background-color: transparent;
+    transition: 0.3s ease;
+}
+
+.game-card:hover {
+    background-color: rgba(255, 255, 255, 0.075);
+    border-radius: 20px;
+}
+
+.gtacnt {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .gta-online-container {
     width: 100%;
-    height: 100vh;      
-    overflow: hidden;   
-    position: relative; 
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
     margin-top: 100px;
 }
 
@@ -247,17 +289,16 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, transparent 10%, black);
-    pointer-events: none; /* This ensures you can still click things behind it if needed */
-    z-index: 0;
-
+    height: 80%; /* Match the video's height exactly */
+    background: linear-gradient(to bottom, transparent 50%, rgb(0, 0, 0));
+    pointer-events: none;
+    z-index: 1; 
 }
 
 .gta-online-container video {
     width: 100%;
-    height: 100%;
-    object-fit: cover;  
+    height: 80%; 
+    object-fit: cover;
     display: block;
     z-index: 0;
 }
@@ -270,38 +311,67 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding-left: 10%; 
-    z-index: 2; 
+    justify-content: end;
+    align-items: start;
+    padding-left: 10%;
+    z-index: 2;
+    gap: 40px;
 }
 
-.gta-online-logo{
+
+.gta-online-logo {
     background-image: url("images/gtaonline.png");
     height: 200px;
     width: 200px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain; 
+    background-size: contain;
 }
 
 .gta-online-cnt h2 {
     color: white;
-    max-width: 600px; 
+    max-width: 600px;
     margin-bottom: 20px;
 }
 
-.btn{
-    width: 130px;
-    height: 40px;
+.btn {
+    width: 190px;
+    height: 70px;
     background-color: transparent;
     color: rgba(255, 255, 255, 0.705);
     outline: none;
     border: 2px solid rgba(255, 255, 255, 0.705);
-    border-radius: 20px;
+    border-radius: 50px;
+    transition: 0.5s ease;
+    font-size: 1.2rem;
 }
 
-.bottom{
+.btns{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.learn-more:hover{
+    background-color: orange;
+    border: 2px solid orange;
+    color: black;
+    cursor: pointer;
+}
+
+.watch-more{
+    border: 2px solid orange;
+    color: orange;
+}
+
+.watch-more:hover{
+    background-color: orange;
+    border: 2px solid orange;
+    color: black;
+    cursor: pointer;
+}
+
+.bottom {
     display: flex;
     flex-direction: row;
     gap: 50px;
@@ -312,21 +382,37 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 25px;         
+    gap: 25px;
 }
 
 
 .image {
-    height: 30px;       
-    width: 80px;        
+    height: 30px;
+    width: 80px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain; 
+    background-size: contain;
 }
 
-/* Assigning the background images */
-.image1 { background-image: url("images/img (1).png"); width: 110px; } 
-.image2 { background-image: url("images/img (2).png"); width: 45px; }  
-.image3 { background-image: url("images/img (3).png"); }
-.image4 { background-image: url("images/img (4).png"); }
-.image5 { background-image: url("images/img (5).png"); width: 95px; }  
+.image1 {
+    background-image: url("images/img (1).png");
+    width: 110px;
+}
+
+.image2 {
+    background-image: url("images/img (2).png");
+    width: 45px;
+}
+
+.image3 {
+    background-image: url("images/img (3).png");
+}
+
+.image4 {
+    background-image: url("images/img (4).png");
+}
+
+.image5 {
+    background-image: url("images/img (5).png");
+    width: 95px;
+}
