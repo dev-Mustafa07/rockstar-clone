@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 * {
     margin: 0;
@@ -289,15 +290,16 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 80%; /* Match the video's height exactly */
+    height: 80%;
+    /* Match the video's height exactly */
     background: linear-gradient(to bottom, transparent 50%, rgb(0, 0, 0));
     pointer-events: none;
-    z-index: 1; 
+    z-index: 1;
 }
 
 .gta-online-container video {
     width: 100%;
-    height: 80%; 
+    height: 80%;
     object-fit: cover;
     display: block;
     z-index: 0;
@@ -335,7 +337,7 @@ body {
 }
 
 .btn {
-    width: 190px;
+    width: 230px;
     height: 70px;
     background-color: transparent;
     color: rgba(255, 255, 255, 0.705);
@@ -346,25 +348,25 @@ body {
     font-size: 1.2rem;
 }
 
-.btns{
+.btns {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
 
-.learn-more:hover{
+.learn-more:hover {
     background-color: orange;
     border: 2px solid orange;
     color: black;
     cursor: pointer;
 }
 
-.watch-more{
+.watch-more {
     border: 2px solid orange;
     color: orange;
 }
 
-.watch-more:hover{
+.watch-more:hover {
     background-color: orange;
     border: 2px solid orange;
     color: black;
@@ -415,4 +417,142 @@ body {
 .image5 {
     background-image: url("images/img (5).png");
     width: 95px;
+}
+
+.gta-online-jump-cards {
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.gta-online-card-section {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+/* Section row layout */
+.gta-online-card-section {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    background-color: #000;
+    /* Matches your image background */
+    padding: 40px;
+}
+
+/* Base card styling */
+.gta-online-cardd {
+    position: relative;
+    height: 50vh;
+    width: 17vw;
+    border-radius: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    /* Keeps the zoomed background inside the corners */
+}
+
+/* Background image layer setup */
+.gta-online-cardd::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    transition: transform 0.5s ease;
+    /* Smooth zoom speed */
+}
+
+/* Assigning your background images to the background layer */
+.cardd1::before {
+    background-image: url("images/gtaonlinecard\ \(1\).png");
+}
+
+.cardd2::before {
+    background-image: url("images/gtaonlinecard\ \(2\).png");
+}
+
+.cardd3::before {
+    background-image: url("images/gtaonlinecard\ \(6\).png");
+}
+
+.cardd4::before {
+    background-image: url("images/gtaonlinecard\ \(5\).png");
+}
+
+.image-content {
+    background-image: url("images/gtaonlinecard\ \(4\).png");
+    width: 155px;
+    height: 144px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 10px;
+}
+
+.image-content3 {
+    background-image: url("images/gtaonline.png");
+    width: 146px;
+    height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 10px;
+}
+
+.image-content2 {
+    background-image: url("images/gtaonlinecard\ \(3\).png");
+    width: 146px;
+    height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 10px;
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    box-sizing: border-box;
+    color: white;
+    font-size: 14px;
+
+
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0) 100%);
+
+
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.card-content p {
+    margin: 0;
+    font-size: 20px;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.gta-online-cardd:hover::before {
+    transform: scale(1.08);
+}
+
+.gta-online-cardd:hover .card-content {
+    opacity: 1;
+    transform: translateY(0);
 }
