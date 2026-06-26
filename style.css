@@ -708,6 +708,12 @@ body {
     animation-play-state: paused;
 }
 
+.slider-heading{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
 /* Row 1 Animation rules (Moves Left) */
 .move-left {
     animation: scrollLeft 75s linear infinite;
@@ -891,4 +897,60 @@ body {
 
 .storecardd3::before {
     background-image: url("images/gamestore/gamestore.png");
+}
+
+.rockstar-propaganda{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.propaganda-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+}
+
+.propaganda-cnt{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.propaganda-cnt h2{
+    color: orange;
+}
+
+.propaganda-heading{
+    font-size: 4rem;
+}
+
+.subscribe-card-btn{
+    height: 50px;
+    width: 200px;
+    border: 2px solid white;
+    background-color: transparent;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.subscribe-card-btn:hover{
+    background-color: white;
+    color: black;
+}
+
+.subsribe-img{
+    width: 70%;
+    margin-top: 100px;
+    border-radius: 30px;
+    border: 1px solid white;
 }
