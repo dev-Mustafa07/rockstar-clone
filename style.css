@@ -954,3 +954,93 @@ body {
     border-radius: 30px;
     border: 1px solid white;
 }
+
+.footer{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.support{
+    height: 50%;
+    width: 100%;
+    background: linear-gradient(transparent, black), url("images/footerbg.png");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.rockstar-support-logo{
+    background-image: url("images/rockstarsupport.png");
+    height: 100px;
+    width: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.support p {
+    width: 30%;
+    text-align: center;
+    color: rgb(165, 164, 164);
+}
+
+.footer-nav-1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding: 0 10%;
+}
+
+.footer-nav-1 .links ul{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.other{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.par{
+    font-size: 12px;
+}
+
+.footer-nav-1 div i{
+    color: rgb(149, 149, 149);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.language{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    outline: none;
+    height: 35px;
+    width: 100px;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+
+.footer-nav-1 .links ul li{
+    list-style: none;
+    font-size: 12px;
+}
