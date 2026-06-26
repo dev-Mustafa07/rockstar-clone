@@ -710,12 +710,12 @@ body {
 
 /* Row 1 Animation rules (Moves Left) */
 .move-left {
-    animation: scrollLeft 35s linear infinite;
+    animation: scrollLeft 75s linear infinite;
 }
 
 /* Row 2 Animation rules (Moves Right) */
 .move-right {
-    animation: scrollRight 35s linear infinite;
+    animation: scrollRight 75s linear infinite;
 }
 
 /* Card Aspect Ratio & Sizing */
@@ -763,6 +763,7 @@ body {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 5px;
+    color: orange;
 }
 
 .library-subheading {
@@ -780,4 +781,114 @@ body {
 @keyframes scrollRight {
     0% { transform: translateX(-50%); }
     100% { transform: translateX(0); }
+}
+
+.btnview {
+    width: 200px;
+    height: 50px;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: 2px solid white;
+    transition: 0.5s ease;
+    font-size: 1.1rem;
+    margin: 30px 0;
+    cursor: pointer;
+}
+
+.btnview:hover{
+    border: 2px solid orange;
+    color: orange;
+}
+
+.gamestore{
+    background-color: rgb(32, 32, 32);
+    height: 100vh;
+    width: 100%;
+    padding: 7% 20%;
+}
+
+.topp{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.gamestore-heading{
+    font-size: 2rem;
+}
+
+.store-card{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.store-online-cardd {
+    position: relative;
+    height: 60vh;
+    width: 20vw;
+    border-radius: 20px;
+    overflow: hidden;
+    /* Keeps the zoomed background inside the corners */
+    display: flex;
+}
+
+/* Background image layer setup */
+.store-online-cardd::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    transition: transform 0.5s ease;
+    /* Smooth zoom speed */
+}
+
+
+.store-card-btn{
+    height: 50px;
+    width: 150px;
+    border: 2px solid white;
+    background-color: transparent;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.store-card-btn:hover{
+    background-color: white;
+    color: black;
+}
+
+.store-online-cardd:hover::before {
+    transform: scale(1.08);
+}
+
+.store-online-cardd:hover .card-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.storecardd1::before {
+    background-image: url("images/gamestore/gamestore\ \(1\).png");
+}
+
+.storecardd2::before {
+    background-image: url("images/gamestore/gamestore\ \(4\).png");
+}
+
+.storecardd3::before {
+    background-image: url("images/gamestore/gamestore.png");
 }
