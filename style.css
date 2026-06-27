@@ -11,6 +11,7 @@
 body {
     background-color: black;
     color: white;
+    overflow-x: hidden;
 }
 
 .nav {
@@ -22,8 +23,8 @@ body {
     justify-content: space-around;
     position: fixed;
     z-index: 1000;
-    background-color:rgba(0, 0, 0, 0.328);
-   backdrop-filter: blur(20px);
+    background-color: rgba(0, 0, 0, 0.328);
+    backdrop-filter: blur(20px);
 }
 
 .left {
@@ -298,7 +299,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 80%;
+    height: 100%;
     /* Match the video's height exactly */
     background: linear-gradient(to bottom, transparent 50%, rgb(0, 0, 0));
     pointer-events: none;
@@ -307,7 +308,7 @@ body {
 
 .gta-online-container video {
     width: 100%;
-    height: 80%;
+    height: 100%;
     object-fit: cover;
     display: block;
     z-index: 0;
@@ -471,7 +472,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 1;
@@ -604,7 +605,7 @@ body {
     /* Adds a clean, uniform space between every item */
 }
 
-.describtion {
+.description {
     width: 40%;
 }
 
@@ -837,7 +838,7 @@ body {
 
 .gamestore {
     background-color: rgb(32, 32, 32);
-    height: 100vh;
+    height: auto;
     width: 100%;
     padding: 7% 20%;
 }
@@ -928,13 +929,14 @@ body {
 }
 
 .rockstar-propaganda {
-    height: 100vh;
+    height: auto;
     width: 100%;
     background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 50px 0;
 }
 
 .propaganda-top {
@@ -1105,20 +1107,106 @@ body {
         height: 80px;
         width: 120px;
     }
-    .gta-vi-cnt{
+
+    .gta-vi-cnt {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 10px;
     }
-    .gta-vi-card{
+
+    .gta-vi-card {
         display: none;
     }
-    .other-cards{
+
+    .other-cards {
         margin-top: 80px;
     }
-    .game-card{
+
+    .game-card {
         width: 90vw;
+    }
+
+    .description {
+        width: 80%;
+    }
+
+    .gta-online-logo {
+        height: 100px;
+        width: 100px;
+    }
+
+    .bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .gta-online-card-section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .gta-online-cardd {
+        width: 70vw;
+    }
+
+    .rdr-online-cardd {
+        width: 70vw;
+        background-position: top;
+    }
+
+    .library-subheading {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.7);
+        width: 80%;
+    }
+
+    .store-card {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 0;
+    }
+
+    .store-online-cardd {
+        width: 60vw;
+    }
+
+    .propaganda-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .propaganda-cnt {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .subsribe-img {
+        margin-top: 50px;
+    }
+
+    .support p {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+
+    .fo {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footer{
+        padding-bottom: 30px;
     }
 }
 
@@ -1128,4 +1216,3 @@ body {
     background-color: darkgray;
   }
 } */
-
