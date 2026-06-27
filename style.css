@@ -20,13 +20,17 @@ body {
     height: 100px;
     align-items: center;
     justify-content: space-around;
-    position: absolute;
+    position: fixed;
+    z-index: 1000;
+    background-color:rgba(0, 0, 0, 0.328);
+   backdrop-filter: blur(20px);
 }
 
 .left {
     background-image: url("images/logo.png");
     height: 50px;
     width: 50px;
+    flex-shrink: 0;
 }
 
 .right {
@@ -34,6 +38,9 @@ body {
     flex-direction: row;
     align-items: center;
     gap: 20px;
+    min-width: 200px;
+    flex-shrink: 0;
+
 }
 
 .get-launcher {
@@ -107,14 +114,13 @@ body {
 .gta-vi-bg {
     background: linear-gradient(transparent 50%, black), url("images/coverart-banner.png");
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
-    align-items: end;
-    padding-bottom: 200px;
+    align-items: center;
     gap: 100px;
 }
 
@@ -127,9 +133,11 @@ body {
     background-image: url("images/gtavi-logo.png");
     height: 150px;
     width: 200px;
+    /* width: 17%;
+    height: 40%; */
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 
 .gtavi-heading {
@@ -574,22 +582,26 @@ body {
 
 .rdr-online-logo {
     background-image: url("images/rdronline.png");
-    height: 150px; /* Sized slightly down to match layout */
+    height: 150px;
+    /* Sized slightly down to match layout */
     width: 250px;
-    background-position: left center; /* Align image nicely to the left */
+    background-position: left center;
+    /* Align image nicely to the left */
     background-repeat: no-repeat;
     background-size: contain;
-    
+
 }
 
 /* 2. Position the entire text box correctly at the bottom */
 .bottom-content {
     position: absolute;
-    bottom: 0; /* Controls how close everything sits to the screen bottom */
+    bottom: 0;
+    /* Controls how close everything sits to the screen bottom */
     left: 10%;
     display: flex;
     flex-direction: column;
-    gap: 25px; /* Adds a clean, uniform space between every item */
+    gap: 25px;
+    /* Adds a clean, uniform space between every item */
 }
 
 .describtion {
@@ -660,7 +672,7 @@ body {
     margin-bottom: 10px;
 }
 
-.rdr-card-btn{
+.rdr-card-btn {
     height: 50px;
     width: 150px;
     border: 2px solid white;
@@ -677,7 +689,8 @@ body {
     position: relative;
     background-color: black;
     color: white;
-    padding-bottom: 80px; /* Space for text at bottom */
+    padding-bottom: 80px;
+    /* Space for text at bottom */
     overflow: hidden;
 }
 
@@ -686,7 +699,8 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Gap between row 1 and row 2 */
+    gap: 15px;
+    /* Gap between row 1 and row 2 */
     width: 100%;
 }
 
@@ -708,7 +722,7 @@ body {
     animation-play-state: paused;
 }
 
-.slider-heading{
+.slider-heading {
     text-align: center;
     margin-bottom: 20px;
     font-size: 2.5rem;
@@ -751,18 +765,22 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 45%; /* Fades out the lower part of the second row */
+    height: 45%;
+    /* Fades out the lower part of the second row */
     background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.95) 90%, black 100%);
-    pointer-events: none; /* Allows user to still hover cards underneath */
+    pointer-events: none;
+    /* Allows user to still hover cards underneath */
     z-index: 2;
 }
 
 /* --- Text Placed At The Last --- */
 .library-text-container {
     position: relative;
-    z-index: 3; /* Places text on top of the gradient */
+    z-index: 3;
+    /* Places text on top of the gradient */
     padding-left: 10%;
-    margin-top: -30px; /* Pulls the text nicely into the gradient shadow area */
+    margin-top: -30px;
+    /* Pulls the text nicely into the gradient shadow area */
 }
 
 .library-heading {
@@ -780,13 +798,23 @@ body {
 
 /* --- Animation Keyframes --- */
 @keyframes scrollLeft {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 @keyframes scrollRight {
-    0% { transform: translateX(-50%); }
-    100% { transform: translateX(0); }
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .btnview {
@@ -802,30 +830,30 @@ body {
     cursor: pointer;
 }
 
-.btnview:hover{
+.btnview:hover {
     border: 2px solid orange;
     color: orange;
 }
 
-.gamestore{
+.gamestore {
     background-color: rgb(32, 32, 32);
     height: 100vh;
     width: 100%;
     padding: 7% 20%;
 }
 
-.topp{
+.topp {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
 }
 
-.gamestore-heading{
+.gamestore-heading {
     font-size: 2rem;
 }
 
-.store-card{
+.store-card {
     display: flex;
     flex-direction: row;
     gap: 30px;
@@ -861,7 +889,7 @@ body {
 }
 
 
-.store-card-btn{
+.store-card-btn {
     height: 50px;
     width: 150px;
     border: 2px solid white;
@@ -873,7 +901,7 @@ body {
     transition: 0.3s ease;
 }
 
-.store-card-btn:hover{
+.store-card-btn:hover {
     background-color: white;
     color: black;
 }
@@ -899,7 +927,7 @@ body {
     background-image: url("images/gamestore/gamestore.png");
 }
 
-.rockstar-propaganda{
+.rockstar-propaganda {
     height: 100vh;
     width: 100%;
     background-color: black;
@@ -909,29 +937,29 @@ body {
     align-items: center;
 }
 
-.propaganda-top{
+.propaganda-top {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 5%;
 }
 
-.propaganda-cnt{
+.propaganda-cnt {
     width: 30%;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.propaganda-cnt h2{
+.propaganda-cnt h2 {
     color: orange;
 }
 
-.propaganda-heading{
+.propaganda-heading {
     font-size: 4rem;
 }
 
-.subscribe-card-btn{
+.subscribe-card-btn {
     height: 50px;
     width: 200px;
     border: 2px solid white;
@@ -943,26 +971,26 @@ body {
     transition: 0.3s ease;
 }
 
-.subscribe-card-btn:hover{
+.subscribe-card-btn:hover {
     background-color: white;
     color: black;
 }
 
-.subsribe-img{
+.subsribe-img {
     width: 70%;
     margin-top: 100px;
     border-radius: 30px;
     border: 1px solid white;
 }
 
-.footer{
+.footer {
     height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.support{
+.support {
     height: 50%;
     width: 100%;
     background: linear-gradient(transparent, black), url("images/footerbg.png");
@@ -973,7 +1001,7 @@ body {
     gap: 10px;
 }
 
-.rockstar-support-logo{
+.rockstar-support-logo {
     background-image: url("images/rockstarsupport.png");
     height: 100px;
     width: 200px;
@@ -988,7 +1016,7 @@ body {
     color: rgb(165, 164, 164);
 }
 
-.footer-nav-1{
+.footer-nav-1 {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -997,13 +1025,13 @@ body {
     padding: 0 10%;
 }
 
-.footer-nav-1 .links ul{
+.footer-nav-1 .links ul {
     display: flex;
     flex-direction: row;
     gap: 10px;
 }
 
-.other{
+.other {
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -1011,7 +1039,7 @@ body {
     justify-content: center;
 }
 
-.social-icons{
+.social-icons {
     display: flex;
     flex-direction: row;
     gap: 30px;
@@ -1019,17 +1047,17 @@ body {
     justify-content: center;
 }
 
-.par{
+.par {
     font-size: 12px;
 }
 
-.footer-nav-1 div i{
+.footer-nav-1 div i {
     color: rgb(149, 149, 149);
     font-size: 15px;
     cursor: pointer;
 }
 
-.language{
+.language {
     background-color: transparent;
     color: white;
     border: 1px solid white;
@@ -1040,7 +1068,64 @@ body {
     border-radius: 10px;
 }
 
-.footer-nav-1 .links ul li{
+.footer-nav-1 .links ul li {
     list-style: none;
     font-size: 12px;
 }
+
+@media screen and (max-width: 768px) {
+    .mid {
+        display: none;
+    }
+
+
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0 30px;
+        width: 100vw;
+
+    }
+
+    .gta-vi-bg {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 30px;
+        width: 100vw;
+    }
+
+    .hero-heading {
+        font-size: 30px;
+    }
+
+    .gta-vi-logo {
+        height: 80px;
+        width: 120px;
+    }
+    .gta-vi-cnt{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .gta-vi-card{
+        display: none;
+    }
+    .other-cards{
+        margin-top: 80px;
+    }
+    .game-card{
+        width: 90vw;
+    }
+}
+
+/* Desktop styles (screens 1024px wide and up) */
+/* @media screen and (min-width: 1024px) {
+  body {
+    background-color: darkgray;
+  }
+} */
+
