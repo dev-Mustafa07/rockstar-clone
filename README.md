@@ -11,7 +11,6 @@ A pixel-conscious front-end clone of the official **Rockstar Games** website, bu
 - **Hero Section** — Full-screen landing area with a looping background video for a cinematic, game-trailer feel.
 - **Animated Infinite Slider** — Smooth, continuously scrolling showcase of games/content.
 - **Card-Based Layouts** — Clean, modular cards used to display games and content sections.
-- **Hamburger Navigation Menu** — Custom mobile menu with toggle animation.
 - **Fully Responsive Design** — Layout adapts across three breakpoints (desktop, tablet, and mobile) for a consistent experience on any screen size.
 
 ---
